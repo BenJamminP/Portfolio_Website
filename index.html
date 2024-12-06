@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                <nav>
+                    <ul>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <h1>Hi, I'm <span>Benjamin</span></h1>
+                </div>
+            </div>
+        </div>
+        <!-----------------about------------------------------->
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/image0edit.jpeg" width="800" length="1000">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+                            I’m Benjamin Pogoda, a recent graduate from the University of Illinois at Chicago with a Bachelor of Science in Computer Science. I’m passionate about crafting innovative solutions that blend programming, automation, and user-focused design to make a real impact.<br><br>
+
+                            With hands-on experience in languages like C++, Java, JavaScript, Python, SQL, and more, I’ve worked on projects ranging from automating invoicing systems to building interactive Discord bots and simulating a casino Baccarat game. My focus is on creating efficient, scalable, and meaningful solutions that solve real-world challenges.<br><br>
+                            
+                            Beyond coding, I enjoy sharing my knowledge as a STEM instructor, where I’ve taught foundational programming, engineering principles, and computer skills to the next generation of tech enthusiasts. Whether it’s designing user-friendly applications, streamlining administrative processes, or tackling ambitious personal projects, 
+                            I’m always looking for opportunities to innovate and collaborate.<br><br>
+                            
+                            Outside of tech, I love staying active with pickleball, basketball, and outdoor adventures like hiking. I’m fluent in Polish,<br> a team player at heart, and always ready to take on new challenges with creativity and determination.<br><br>
+                            
+                            Let’s connect, explore my projects, and turn great ideas into reality—together!<br><br>
+                        </p>
+                            <div class="tab-titles">
+                                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                                <p class="tab-links" onclick="opentab('education')">Education</p>
+                            </div>  
+                            <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span>Programming Languages</span><br>C++, C, JavaScript, Python, SQL, Java, HTML, CSS, Java</li>
+                                    <li><span>Frameworks and Libraries</span><br>Pandas, Jupyter, Docx, React, JavaFX, JUnit, Google Test, Maven, Android Studio</li>
+                                    <li><span>Languages</span><br>Polish (fluent)</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="experience">
+                                <ul>
+                                    <li><span>October 2024 - Current</span><br>STEM Instructor at Computer Explorers</li>
+                                    <li><span>June 2024 - July 2024</span><br>Administrative Automation Intern at Sunrise Janitorial Services</li>
+                                </ul>
+                            </div>
+                            <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2024</span><br>BS in Computer Science at University of Illinois at Chicago</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------portfolio---------------------------->
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">Projects</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/Discord_Bot_img.png">
+                        <div class="layer">
+                            <h3>Discord Bot</h3>
+                            <p>
+                                This Discord bot lets you know when you your friends are playing a game and lets you know how they did at the end. (Code is availabale upon request)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/Baccarat_Game.png">
+                        <div class="layer">
+                            <h3>Baccarat Game Simulator</h3>
+                            <p>
+                                This is a Baccarat Game Simulator that simulates a game of Baccarat. (Code is available upon request)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/Assembly_Language_Interpreter_img.png">
+                        <div class="layer">
+                            <h3>Assembly Language Interpreter</h3>
+                            <p>
+                                This allows you to give a .txt file and it will interpret the Assembly instructions in the file. (Code is available upon request)
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------contact---------------------------->
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-sharp fa-solid fa-share"></i> benpog22@gmail.com</p>
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/benpog22"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/BenJamminP"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="text" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab");
+            }
+        </script>
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyIECEQ-7PKsSP5eTKwhdpujiJzsOvQNX8s8o7cXTJbLz2AwWpnZzG0WMhXwRElr8-6/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Submission Successful!"
+            setTimeout(function(){
+                msg.innerHTML =""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+    </body>
+</html>
